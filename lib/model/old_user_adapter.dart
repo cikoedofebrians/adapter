@@ -11,10 +11,7 @@ class OldUserAdapter implements NewUserInterface {
   @override
   bool isOnBirthday() {
     final birthDate = DateFormat('dd-MM-yyyy').parse(oldUser.birthDate);
-
     final now = DateTime.now();
-    print(birthDate);
-    print(now);
     return now.month == birthDate.month && now.day == birthDate.day;
   }
 
